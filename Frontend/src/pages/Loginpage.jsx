@@ -6,14 +6,14 @@ import { useUserStore } from "../stores/useUserStore";
 const Loginpage = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	
+
 
 	const { login, loading } = useUserStore();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(email, password);
-		login({ email, password });
+		login(email, password);
 	};
 
 	return (
